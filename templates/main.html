@@ -1,0 +1,33 @@
+<header class="toolbar toolbar-header" id = "product" >
+  <h1 class="title">Products</h1>
+</header>
+<div class="container-fluid">
+	<div class="row">
+  <div class="col-xs-5 col-md-3"><center><h3>Item ID</h3></center></div>
+  <div class="col-xs-5 col-md-3"><center><h3>Item Name</h3></center></div>
+  <div class="col-xs-5 col-md-3"><center><h3>Price</h3></center></div>
+  <div class="col-xs-5 col-md-3"><center><h3>Slection</h3></center></div>
+</div>
+</div>
+<!-- 1 -->
+{% for i in range(0,12)%}
+<div class="container-fluid">
+	<div class="row">
+  <div class="col-xs-5 col-md-3" id = "id{{ i }}"><center></center></div>
+  <div class="col-xs-5 col-md-3" id = "name{{ i }}"><center></center></div>
+  <div class="col-xs-5 col-md-3" id = "price{{ i }}"><center></center></div>
+  <div class="col-xs-5 col-md-3" class="checkbox">
+    <label>
+      <input type="checkbox" id = "sel{{ i }}"> 
+    </label>
+</div>
+</div>
+</div>
+{% endfor %}
+
+<div class = "container-fluid">
+	<div class="row">
+	  <div class="col-xs-12 col-md-8"><button class="btn btn-large btn-positive" id = "add">Add to Cart</button></div>
+	  <div class="col-xs-6 col-md-4"><button class="btn btn-large btn-negative" id = "remove">Clear</button></div>
+	</div>
+</div>
