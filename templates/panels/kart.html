@@ -1,11 +1,42 @@
 <nav class="nav-group">
   <h5 class="nav-group-title">Catagories</h5>
-  <a class="nav-group-item">
-  	<span class="icon icon-basket"></span>
-    Cart
+  <a class="nav-group-item active">
+  	<cener><span class="icon icon-basket"></span>
+    CART
+</cener>
   </a>
-  <a class="nav-group-item">
+  <div class="row">
+  <div class="col-xs-6 col-md-4">Item ID</div>
+  <div class="col-xs-6 col-md-4">Item Name</div>
+  <div class="col-xs-6 col-md-4">Price</div>
+</div>
+  {% for i in range(0,12)%}
+  <div class="row">
+  <div class="col-xs-6 col-md-4" id = "ids{{ i }}"></div>
+  <div class="col-xs-6 col-md-4" id = "names{{ i }}"></div>
+  <div class="col-xs-6 col-md-4" id = "prices{{ i }}"></div>
+</div>
+{% endfor %}
+<div class="row">
+  <div class="col-xs-12 col-md-8">Total Price:</div>
+  <div class="col-xs-6 col-md-4" id = "total"></div>
+</div>
+  <a class="nav-group-item active">
   	<span class="icon icon-user"></span>
-    User
+    USER
   </a>
+  	<label>Customer Id</label>
+	<input type="number" class="form-control" placeholder="ID" id = "cid">
+	<label>Name</label>
+	<input type="text" class="form-control" placeholder="Name" id = "cname">
+	<label>Address</label>
+	<input type="text" class="form-control" placeholder="Address" id = "addr">
+	<label>Phone No</label>
+	<input type="number" class="form-control" placeholder="Mobile Number" id = "phone">
+	<label>Email address</label>
+	<input type="text" class="form-control" placeholder="Email" id = "email">
+	<br>
+	<div class = "checkbox">
+		<center><button class="btn btn-large btn-default" id = "submit">SUBMIT</button></center>
+	</div>
 </nav>
